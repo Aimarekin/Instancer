@@ -1,11 +1,12 @@
 local propPriority = require(script.Parent.Parent.Definitions.propPriorities).RegularProp
 
-function RefExecute(rbx: Instance, holdingTable: {}, savedArgs: { refName: string })
-    holdingTable[savedArgs.refName] = rbx
+function RefExecute(self, rbx: Instance, holdingTable: {})
+    holdingTable[self.savedArgs.refName] = rbx
 end
 
 function Ref(refName: string)
     return {
+        type = "SpecialProp",
         attrName = "Ref",
         priority = propPriority,
         execute =  RefExecute,

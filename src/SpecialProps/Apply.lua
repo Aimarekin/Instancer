@@ -1,6 +1,6 @@
 local propPriority = require(script.Parent.Parent.Definitions.propPriorities).Apply
 
-function ApplyExecute<T>(rbx: T, functions: { (T) -> () })
+function ApplyExecute<T>(self, rbx: T, functions: { (T) -> () })
     for _, func in ipairs(functions) do
         xpcall(
             func,
@@ -17,6 +17,7 @@ function ApplyExecute<T>(rbx: T, functions: { (T) -> () })
 end
 
 return {
+    type = "SpecialProp",
     propName = "Apply",
     priority = propPriority,
     execute =  ApplyExecute

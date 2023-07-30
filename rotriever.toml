@@ -1,0 +1,8 @@
+[package]
+name = "Instancer"
+authors = [
+  "Aimarekin"
+]
+license = "MIT"
+content_root = "src"
+version = "0.0.2"

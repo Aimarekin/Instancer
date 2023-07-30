@@ -11,7 +11,7 @@ function MountProps(rbx: Instance, props: {})
                     "\nOBJECT: ", rbx
                 )
             end,
-            rbx, prop.value, prop.savedArgs
+            prop, rbx, prop.value
         )
     end
 end

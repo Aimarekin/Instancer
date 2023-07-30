@@ -1,6 +1,6 @@
 local propPriority = require(script.Parent.Parent.Definitions.propPriorities).Bindings
 
-function ResizeExecute(rbx: Instance, callback: (Instance, Vector2) -> ())
+function ResizeExecute(self, rbx: Instance, callback: (Instance, Vector2) -> ())
     local connection: RBXScriptConnection? = nil
 
     local function ResizeConnection()
@@ -24,6 +24,7 @@ function ResizeExecute(rbx: Instance, callback: (Instance, Vector2) -> ())
 end
 
 return {
+    type = "SpecialProp",
     propName = "Resize",
     priority = propPriority,
     execute =  ResizeExecute

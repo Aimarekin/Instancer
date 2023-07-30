@@ -1,11 +1,12 @@
 local propPriority = require(script.Parent.Parent.Definitions.propPriorities).RegularProp
 
-function AttrExecute(rbx: Instance, value: any, savedArgs: { attrName: string })
-    rbx:SetAttribute(savedArgs.attrName, value)
+function AttrExecute(self, rbx: Instance, value: any)
+    rbx:SetAttribute(self.savedArgs.attrName, value)
 end
 
 function Attr(attrName: string)
     return {
+        type = "SpecialProp",
         propName = "Attr",
         priority = propPriority,
         execute =  AttrExecute,
