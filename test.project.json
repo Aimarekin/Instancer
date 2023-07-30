@@ -1,0 +1,21 @@
+{
+  "name": "Instancer Test",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "Instancer": {
+        "$path": "src"
+      },
+      "Tests": {
+        "$path": "tests"
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "execution/client"
+      }
+    }
+  }
+}
