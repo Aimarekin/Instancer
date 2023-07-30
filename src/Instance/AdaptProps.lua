@@ -1,8 +1,8 @@
 local robloxPropPriorities = require(script.Parent.Parent.Definitions.robloxPropPriorities)
 local propTransformations = require(script.Parent.Parent.Definitions.propTransformations)
 
-function ApplyProp(rbx: Instance, value: any, savedArgs: { propName: string })
-    rbx[savedArgs.propName] = value
+function ApplyProp(self, rbx: Instance, value: any)
+    rbx[self.savedArgs.propName] = value
 end
 
 function AdaptProps(rbx: Instance, props: {})
